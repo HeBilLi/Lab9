@@ -68,7 +68,7 @@
       class ConversionError extends Error {
         constructor(message) {
           super(message);
-          this.name = "Conversion Error";
+          this.name = "Conversion Error: Value converted to NaN";
         }
       }
 
@@ -162,7 +162,6 @@
       window.onerror = function () {
         console.log("Sadly an error happened friend");
         TrackJS.track('Testing TrackJS!');
-        // console.error("Error: " + errorMsg + " Script: " + url + " Line: " + lineNumber);
       };
 
       function onClick() {
